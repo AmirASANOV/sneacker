@@ -2,16 +2,24 @@ import React from "react";
 
 import cardStyles from "./Card.module.scss"; //SCSS Modules подход   //БЭМ
 
-function Card({ img, title, price, onFavorite, onPlus, favorited = false }) {
+function Card({
+  id,
+  title,
+  imageUrl,
+  price,
+  onFavorite,
+  onPlus,
+  favorited = false,
+}) {
   const [isAdded, setIsAdded] = React.useState(false);
   const [isFavorite, setIsFavorite] = React.useState(favorited);
   const onClickPlus = () => {
-    onPlus({ title, img, price });
+    onPlus({ title, imageUrl, price });
     setIsAdded(!isAdded);
   };
 
   const onClickFavorite = () => {
-    onFavorite({ title, img, price });
+    onFavorite({ title, imageUrl, price });
     setIsFavorite(!isFavorite);
   };
 
@@ -28,7 +36,7 @@ function Card({ img, title, price, onFavorite, onPlus, favorited = false }) {
         />
       </div>
 
-      <img width={133} height={120} src={img} alt="Sneaker" />
+      <img width={133} height={120} src={imageUrl} alt="Sneaker" />
       <h5 className="mb-40">{title}</h5>
       <div className="d-flex justify-between align-center">
         <div className="d-flex flex-column">

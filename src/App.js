@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Drawer from "./components/Drawer";
 import axios from "axios";
 import Home from "./pages/Home";
-import Favorites from "./pages/favorites";
+import Favorites from "./pages/Favorites";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -36,10 +36,7 @@ function App() {
       });
   }, []);
 
-<div></div>
-
   const onAddToCart = (obj) => {
-    
     axios.post("https://64613157491f9402f4a0780b.mockapi.io/cart", obj);
     setCartItems((prev) => [...prev, obj]);
   };
