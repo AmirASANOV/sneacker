@@ -1,5 +1,6 @@
+import React from "react";
 import Card from "../components/Card";
-function Favorites({ items }) {
+function Favorites({ items, onAddToFavorite }) {
   return (
     <div className="content p-40">
       <div className="d-flex justify-between align-center mb-40">
@@ -8,7 +9,12 @@ function Favorites({ items }) {
 
       <div className="d-flex flex-wrap">
         {items.map((item, index) => (
-          <Card key={index} title={item.title} />
+          <Card
+            key={index}
+            favorited={true}
+            onFavorite={onAddToFavorite}
+            {...item}
+          />
         ))}
       </div>
     </div>

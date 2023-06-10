@@ -20,7 +20,7 @@ function Drawer({ onClose, onRemove, items = [] }) {
                   <div className="cartItem d-flex align-center mb-20">
                     <div
                       style={{
-                        backgroundImage: `url(${obj.img})`,
+                        backgroundImage: `url(${obj.imageUrl})`,
                       }}
                       className="cartItemImg"
                     ></div>
