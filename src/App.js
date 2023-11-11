@@ -9,14 +9,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [items, setItems] = React.useState([]);
+  console.log(items);
   const [cartItems, setCartItems] = React.useState([]); //для хранения товаров в корзине
   const [searchValue, setSearchValue] = React.useState("");
   const [cartOpened, setCartOpened] = React.useState(false);
   const [favorites, setFavorites] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("https://64613157491f9402f4a0780b.mockapi.io/items")
+    fetch("https://654f7129358230d8f0cd5177.mockapi.io/items")
       .then((res) => {
+        console.log(res);
         return res.json();
       })
       .then((json) => {
@@ -24,7 +26,7 @@ function App() {
       });
 
     axios
-      .get("https://64613157491f9402f4a0780b.mockapi.io/items")
+      .get("https://654f7129358230d8f0cd5177.mockapi.io/items")
       .then((res) => {
         setItems(res.data);
       });
@@ -51,7 +53,7 @@ function App() {
         const { data } = await axios.post(
           "https://6478d8f7362560649a2e898f.mockapi.io/favorites",
           obj
-        ); 
+        );
         setFavorites((prev) => [...prev, data]);
       }
     } catch (error) {
