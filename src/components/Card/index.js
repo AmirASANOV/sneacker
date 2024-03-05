@@ -33,6 +33,7 @@ function Card({
               : "/files/images/unlikeditem.svg"
           }
           className={cardStyles.favorite}
+          alt="logo"
         />
       </div>
 

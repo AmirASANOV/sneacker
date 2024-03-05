@@ -9,6 +9,7 @@ function Header(props) {
             width={40}
             height={40}
             src="/files/images/logo.png"
+            alt="logo"
           />
           <div className="header">
             <h3 className="text-uppercase">React Sneakers</h3>
@@ -19,7 +20,12 @@ function Header(props) {
 
       <ul className="d-flex ">
         <li onClick={props.onClickCart} className="mr-30 cu-p">
-          <img width={18} height={18} src="/files/images/shop_logo.png" />
+          <img
+            width={18}
+            height={18}
+            src="/files/images/shop_logo.png"
+            alt="logo"
+          />
 
           <span>1205 R</span>
         </li>
@@ -29,7 +35,12 @@ function Header(props) {
           </Link>
         </li>
         <li className="mr-30 cu-p">
-          <img width={18} height={18} src="/files/images/profile_logo.png" />
+          <img
+            width={18}
+            height={18}
+            src="/files/images/profile_logo.png"
+            alt="logo"
+          />
           <span>1205R</span>
         </li>
       </ul>

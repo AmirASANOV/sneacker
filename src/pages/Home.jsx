@@ -2,7 +2,6 @@ import Card from "../components/Card";
 function Home({
   items,
   searchValue,
-  setSearchValue,
   onChangeSearchInput,
   onAddToFavorite,
   onAddToCart,
